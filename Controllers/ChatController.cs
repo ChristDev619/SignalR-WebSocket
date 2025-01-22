@@ -9,20 +9,5 @@ public class ChatController : Controller
     {
         return View();
     }
-
-
-    [HttpPost]
-    public IActionResult Create(ChatMessage chatMessage)
-    {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
-
-        // Save the message to the database (optional)
-        // _dbContext.ChatMessages.Add(chatMessage);
-        // _dbContext.SaveChanges();
-
-        return Ok(new { message = "Message sent successfully" });
-    }
+ 
 }
